@@ -1,0 +1,326 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+footer {
+  background-color: #263753;
+  padding-top: 20px;
+}
+
+.logo-font {
+  vertical-align: middle;
+}
+
+footer p, footer h2 {
+  color: #fff;
+}
+
+.jumbotron img {
+  margin: -20px 0 30px 0;
+}
+
+footer h2 {
+  margin-bottom: 5px;
+}
+
+footer p {
+  font-size: 0.85rem;
+  line-height: 1.4
+}
+
+footer li a, footer li a:hover {
+  color: #fff;
+}
+
+footer hr {
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 0.7rem;
+}
+
+footer ul {
+  list-style-type: none;
+  color: #fff;
+  margin-left: -35px;
+  font-size: 0.85rem;
+  line-height: 1.4
+}
+
+.copyright {
+  width: 50%;
+  float:left;
+}
+
+.h2_custom {
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 30px !important;
+}
+
+.copyright:last-child {
+  text-align: right;
+}
+
+.woning-grid {
+  margin-bottom: 25px !important;
+}
+
+.woning-grid img {
+  width: 350px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.woning-grid li {
+  list-style-type: none;
+  margin: 5px 0 -5px -40px;
+}
+
+.woning-grid li:first-child {
+  font-weight: bold;
+}
+
+.woning-grid li:last-child {
+  color: #ED6B06;
+  margin-top: 10px;
+}
+
+.woning-grid ul {
+  margin-bottom: 25px;
+}
+
+.container_home {
+  padding-bottom: 15px;
+  @media (min-width:991px)
+  {
+    padding-bottom: 25px;
+  }
+}
+
+.first-pic {
+  padding: 15px 0;
+  @media (min-width:991px)
+  {
+    padding: 0;
+  }
+}
+
+.searchbox {
+  min-height: 100px;
+  height: 100%;
+  background-color: #ED6B06;
+  width: 100%;
+  padding: 30px 30px 20px 30px;
+  margin: 0px 0 45px 0;
+}
+
+.searchbox .form-group {
+  margin-bottom: 0.2rem;
+}
+
+.searchbox select {
+  margin-bottom: 15px;
+}
+
+.searchbox label {
+  float: left;
+  background-color: #fff;
+}
+
+.searchbox .btn-primary {
+  background-color: #263753;
+  height: 42px;
+  width: 100%;
+  @media (min-width:991px)
+  {
+    margin-bottom: 0;
+  }
+  margin-bottom: 15px;
+}
+
+.searchbox .btn-primary:hover {
+  background-color: #181e31;
+}
+
+.angle-relevance {
+  position: absolute;
+  right: -16px;
+  bottom: 0;
+  color: #fff;
+}
+
+.ddl-angle {
+  position: absolute;
+  top: 13px;
+  right: 34px;
+}
+
+.price-label {
+  width: 45px;
+  text-align: center;
+  height: 39px;
+  color: #9d9d9d;
+  border: none;
+  left: 16px;
+  position: absolute;
+  top: 1px;
+}
+
+.category {
+  padding-left: 45px !important;
+  color: #26377C;
+}
+
+.searchbox a {
+  color: #fff !important;
+  position: relative;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.searchbox a:hover {
+  text-decoration: underline !important;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+.margin-bottom-double {
+  margin-bottom: 60px;
+}
+
+h6 {
+  color: #9c9b9b !important;
+}
+
+.first-pic {
+  @media (min-width:991px)
+  {
+    width: 75%;
+    margin-top: 30px;
+  }
+}
+
+.pic-container {
+  @media (min-width:991px)
+  {
+    margin-left: 4px;
+    margin-top: 30px;
+    vertical-align: top;
+    display: inline-block;
+    width: 24%;
+  }
+}
+
+.pic-container img {
+  max-width: 100%;
+  margin-bottom: 9px;
+}
+
+.description-list {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.description-list:last-child {
+  @media (min-width:991px)
+  {
+    margin-left: -40px;
+  }
+}
+
+.description-list li {
+  margin-bottom: 5px;
+}
+
+.list-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-right: 50px;
+}
+
+.list-content {
+  position: absolute;
+  left: 190px;
+  font-size: 0.95rem;
+}
+
+#google-map {
+  min-height: 400px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.jumbotron_small-padding {
+  padding: 2rem !important;
+}
+
+.small-p p {
+  font-size: 0.9rem;
+}
+
+.small-p p:last-child,
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.navbar-brand img {
+  height: 30px;
+}
+.woning_headers {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.woning_headers h2 {
+  margin-top: 20px;
+  margin-bottom: 10px !important;
+}
+
+.woning_headers h5 {
+  margin-top: 15px;
+}
+
+.padding-left-cs {
+  padding-left: 5px !important;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.share-bar li {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  list-style-type: none;
+  font-size: 1.7rem;
+}
+
+.share-bar ul {
+  margin-top: 30px;
+  margin-left: -40px;
+  text-align: center;
+}
+
+.share-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase
+}
+
+.share-icons {
+  position: absolute;
+  left: 85px;
+  bottom: -30px;
+}
+
+.share-icons a {
+  color: #263753;
+}
+
