@@ -50,48 +50,49 @@
 <div class="container container_home">
     <h2 class="h2_custom text-sm-center text-xs-center">Woning in beeld</h2>
 
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-            <?php
-            foreach ($result as $key=>$woning) {
-                if ($key % 3 == 0) {
-                    $active = ($key == 0) ? 'active' : '';
-                    echo "<div class='carousel-item text-lg-left text-md-left text-sm-center text-xs-center $active'>
+    <div class="overflow-wrapper">
+        <div id="woning-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <?php
+                foreach ($result as $key=>$woning) {
+                    if ($key % 3 == 0) {
+                        $active = ($key == 0) ? 'active' : '';
+                        echo "<div class='carousel-item text-lg-left text-md-left text-sm-center text-xs-center $active'>
                           <div class='woning-grid text-lg-left text-md-left text-sm-center text-xs-center'>";
-                }
-                $price       = number_format($woning['prijs'], 0, ',', '.');
-                $slaapkamers = $woning['slaapkamers'];
-                $woningID    = $woning['woning_id'];
-                $randomnum   = rand(1, 32000);
-                $slaap       = ($slaapkamers == 1) ? 'slaapkamer' : 'slaapkamers';
+                    }
+                    $price       = number_format($woning['prijs'], 0, ',', '.');
+                    $slaapkamers = $woning['slaapkamers'];
+                    $woningID    = $woning['woning_id'];
+                    $randomnum   = rand(1, 32000);
+                    $slaap       = ($slaapkamers == 1) ? 'slaapkamer' : 'slaapkamers';
 
-                switch ($woning['type']) {
-                    case 1;
-                        $woningType = 'Huis';
-                        break;
-                    case 2;
-                        $woningType = 'Appartement';
-                        break;
-                    case 3;
-                        $woningType = 'Villa';
-                        break;
-                    case 4;
-                        $woningType = 'Commercieel';
-                        break;
-                    case 5:
-                        $woningType = 'Garage';
-                        break;
-                    case 6:
-                        $woningType = 'Parkeerplaats';
-                        break;
-                    case 7:
-                        $woningType = 'Grond';
-                        break;
-                    default:
-                        $woningType = 'Huis';
-                }
+                    switch ($woning['type']) {
+                        case 1;
+                            $woningType = 'Huis';
+                            break;
+                        case 2;
+                            $woningType = 'Appartement';
+                            break;
+                        case 3;
+                            $woningType = 'Villa';
+                            break;
+                        case 4;
+                            $woningType = 'Commercieel';
+                            break;
+                        case 5:
+                            $woningType = 'Garage';
+                            break;
+                        case 6:
+                            $woningType = 'Parkeerplaats';
+                            break;
+                        case 7:
+                            $woningType = 'Grond';
+                            break;
+                        default:
+                            $woningType = 'Huis';
+                    }
 
-                echo "
+                    echo "
                     <div class='col-md-4'>
                         <a href='woning?id=$woningID'>
                             <img class='img-fluid' src='images/woningen/Woning_$woningID/001-mainpic.jpg?$randomnum' />
@@ -103,21 +104,24 @@
                         </ul>
                     </div>
                 ";
-                if ($key == 2 || $key == 5 || $key == 8 || $key == 11 || $key == 14) {
-                    echo "</div></div>";
+                    if ($key == 2 || $key == 5 || $key == 8 || $key == 11 || $key == 14) {
+                        echo "</div></div>";
+                    }
                 }
-            }
-            ?>
-        </div><!-- Carousel inner -->
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div><!-- Main coursel -->
+                ?>
+            </div><!-- /Carousel inner -->
+
+            <!-- Carousel Controls Custom -->
+            <a class="carousel-control-prev" href="#woning-carousel" role="button" data-slide="prev">
+                dd<i class="fa fa-chevron-left" aria-hidden=""></i>
+            </a>
+            <a class="carousel-control-next" href="#woning-carousel" role="button" data-slide="next">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </a>
+
+        </div><!-- /Woning Carousel -->
+    </div>
+
 
     <div class="col-sm-12 text-lg-center text-xs-center">
         <p><a class="btn btn-primary btn-lg" href="kopen" role="button">Bekijk het volledig koopaanbod &raquo;</a></p>
@@ -159,9 +163,6 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="docs/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script>
-    $( document ).ready(function() {
-       // $('.carousel').carousel();
-    });
     function initMap() {
         var mapCanvas = document.getElementById('google-map'),
             myLatLng = new google.maps.LatLng(51.1501859, 2.7210115000000314),
@@ -184,6 +185,5 @@
         marker.setMap(map);
     }
 </script>
-
 </body>
 </html>
