@@ -72,6 +72,10 @@ footer ul {
   margin-top: 10px;
 }
 
+.img-border {
+  border: 1px solid #dedddd;
+}
+
 .woning-grid li {
   list-style-type: none;
   margin: 5px 0 -5px -40px;
@@ -221,7 +225,6 @@ h6 {
 
 .description-list {
   list-style-type: none;
-  margin-bottom: 30px;
 }
 
 .description-list:last-child {
@@ -240,6 +243,10 @@ h6 {
   text-transform: uppercase;
   font-size: 0.8rem;
   margin-right: 50px;
+}
+
+.info-list .list-header {
+  margin-right: 0;
 }
 
 .list-content {
@@ -327,4 +334,15 @@ h6 {
 .overflow-wrapper {
   overflow: hidden;
   margin-top: -25px;
+}
+
+.info-list {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+.info-list li:before {
+  font-size: 23px;
+  color: #ED6B06;
+  content:"\2713\0020";
 }

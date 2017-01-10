@@ -155,58 +155,89 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                     </li>
                 </ul>
             </div>
+            
             <h2>Indeling</h2>
-            <ul class="">
-                <li>
-                    <span class="list-header">Type:</span>
-                    <span class="list-content">Huis</span>
-                </li>
-                <li>
-                    <span class="list-header">Bouwjaar:</span>
-                    <span class="list-content">1976</span>
-                </li>
-                <li>
-                    <span class="list-header">Staat:</span>
-                    <span class="list-content">Herverkoop</span>
-                </li>
-                <li>
-                    <span class="list-header">Woon opp:</span>
-                    <span class="list-content">170m²</span>
-                </li>
-                <li>
-                    <span class="list-header">Grond opp:</span>
-                    <span class="list-content">300m²</span>
-                </li>
-                <li>
-                    <span class="list-header">Omgeving</span>
-                    <span class="list-content">Park</span>
-                </li>
+            <ul class="info-list">
+                <?php
+                $terrasN        = $woningResult['terrasN'];
+                $terras         = $woningResult['terras'];
+                $livingN        = $woningResult['livingN'];
+                $living         = $woningResult['living'];
+                $inkomN         = $woningResult['inkomN'];
+                $inkom          = $woningResult['inkom'];
+                $hoekN          = $woningResult['hoekN'];
+                $hoek           = $woningResult['hoek'];
+                $slaapN         = $woningResult['slaapN'];
+                $slaap          = $woningResult['slaap'];
+                $badkamerN      = $woningResult['badkamerN'];
+                $badkamer       = $woningResult['badkamer'];
+                $keukenN        = $woningResult['keukenN'];
+                $keuken         = $woningResult['keuken'];
+                $bergingN       = $woningResult['bergingN'];
+                $berging        = $woningResult['berging'];
+                $garageN        = $woningResult['garageN'];
+                $garage         = $woningResult['garage'];
+                $parkeerplaatsN = $woningResult['parkeerplaatsN'];
+                $parkeerplaats  = $woningResult['parkeerplaats'];
+                $tuinN          = $woningResult['tuinN'];
+                $tuin           = $woningResult['tuin'];
+
+                $extra1N        = $woningResult['extra1N'];
+                $extra1         = $woningResult['extra1'];
+                $extra2         = $woningResult['extra2'];
+                $extra2N        = $woningResult['extra2N'];
+
+                if ($terrasN != 0){echo "<li><span class='list-header'>Terras</span> - $terras</li>";}
+                if ($livingN != 0){echo "<li><span class='list-header'>Woonkamer</span>  - $living</li>";}
+                if ($inkomN != 0){echo "<li><span class='list-header'>Inkomhal</span> - $inkom</li>";}
+                if ($hoekN != 0){echo "<li><span class='list-header'>Slaaphoek</span> - $hoek</li>";}
+                if ($slaapN != 0){echo "<li><span class='list-header'>$slaapN Slaapkamer(s)</span> - $slaap</li>";}
+                if ($badkamerN != 0){echo "<li><span class='list-header'>$badkamerN Badkamer(s)</span> - $badkamer</li>";}
+                if ($keukenN != 0){echo "<li><span class='list-header'>Keuken</span> - $keuken</li>";}
+                if ($bergingN != 0){echo "<li><span class='list-header'>Berging</span> - $berging</li>";}
+                if ($garageN != 0){echo "<li><span class='list-header'>Garage</span> - $garage</li>";}
+                if ($parkeerplaatsN != 0){echo "<li><span class='list-header'>Parkeerplaats</span> - $parkeerplaats</li>";}
+                if ($tuinN != 0){echo "<li><span class='list-header'>Tuin</span> - $tuin</li>";}
+
+                if ($extra1N != 0){echo "<li>$extra1</li>";}
+                if ($extra2N != 0){echo "<li>$extra2</li>";}
+                ?>
             </ul>
-            <h2>Bijkomende informatie</h2>
-            <ul class="">
+
+            <h2 class="margin-top">Bijkomende informatie</h2>
+            <ul class="info-list margin-bottom-double">
                 <li>
-                    <span class="list-header">Type:</span>
-                    <span class="list-content">Huis</span>
+                    Werd er een stedenbouwkundige vergunning uitgereikt? Ja
                 </li>
                 <li>
-                    <span class="list-header">Bouwjaar:</span>
-                    <span class="list-content">1976</span>
+                    Meest recente stedenbouwkundige bestemming? Woongebied
                 </li>
                 <li>
-                    <span class="list-header">Staat:</span>
-                    <span class="list-content">Herverkoop</span>
+                    Dagvaardingen? Nee
                 </li>
                 <li>
-                    <span class="list-header">Woon opp:</span>
-                    <span class="list-content">170m²</span>
+                    Voorkooprecht? Nee
                 </li>
                 <li>
-                    <span class="list-header">Grond opp:</span>
-                    <span class="list-content">300m²</span>
+                    Verkavelingsvergunning? Nee
                 </li>
                 <li>
-                    <span class="list-header">Omgeving</span>
-                    <span class="list-content">Park</span>
+                    As-Built Attest verkregen? Nee
+                </li>
+                <li>
+                    Effectief overstromingsgevoelig? Nee
+                </li>
+                <li>
+                    Mogelijk overstromingsgevoelig? Nee
+                </li>
+                <li>
+                    Afgebakend overstromingsgebied? Nee
+                </li>
+                <li>
+                    Afgebakende oeverzone? Nee
+                </li>
+                <li>
+                    Risicozone voor overstromingen? Nee
                 </li>
             </ul>
         </div>

@@ -48,7 +48,7 @@
                 echo "                                
                     <div class='col-md-4 lazy'>
                         <a href='spanje-detail?id=$key'>
-                            <img class='img-fluid' src='$image[0]' />
+                            <img class='img-fluid img-border' src='$image[0]' />
                         </a>
                         <ul>
                             <li>Kamers: $house->Rooms</li>
