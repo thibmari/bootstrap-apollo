@@ -8,8 +8,8 @@ footer {
   padding-top: 20px;
 }
 
-.logo-font {
-  vertical-align: middle;
+.no-hover:hover {
+  background-color: #eceeef !important;
 }
 
 footer p, footer h2 {
@@ -64,6 +64,10 @@ footer ul {
 
 .woning-grid {
   margin-bottom: 25px !important;
+}
+
+.woning-grid_spanje {
+  margin-top: 40px;
 }
 
 .woning-grid img {
@@ -277,7 +281,7 @@ h6 {
 }
 
 .navbar-brand img {
-  height: 30px;
+  height: 40px;
 }
 .woning_headers {
   margin-top: 30px;

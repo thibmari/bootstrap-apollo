@@ -37,7 +37,7 @@
 <div class="container">
     <!--<h2 class="text-lg-left text-md-left text-sm-center text-xs-center margin-top">Vakantiehuizen te koop in Zuid Spanje</h2>-->
 
-    <div class='row woning-grid text-lg-left text-md-left text-sm-center text-xs-center active'>
+    <div class='row woning-grid woning-grid_spanje text-lg-left text-md-left text-sm-center text-xs-center active'>
 
         <?php
             $xml = simplexml_load_file("http://media.egorealestate.com/XML/oktober%202016_4486.xml");

@@ -12,10 +12,8 @@
 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
 
 <div class="container">
-    <a class="navbar-brand" href="index.php">
-        <img src="images/logo-horizontal.png" alt="logo horizontal" />
-        <span class="logo-font">IMMO</span>
-        <span class="logo-font">APOLLO</span>
+    <a class="navbar-brand no-hover" href="index.php">
+        <img src="images/logo-h.png" alt="logo horizontal" />
     </a>
 
     <div class="collapse navbar-toggleable-md text-xs-center" id="navbarResponsive">

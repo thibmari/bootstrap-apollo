@@ -12,6 +12,7 @@
     <title>Vastgoed Nieuwpoort | IMMO APOLLO</title>
 
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -113,7 +114,7 @@
 
             <!-- Carousel Controls Custom -->
             <a class="carousel-control-prev" href="#woning-carousel" role="button" data-slide="prev">
-                dd<i class="fa fa-chevron-left" aria-hidden=""></i>
+                <i class="fa fa-chevron-left" aria-hidden=""></i>
             </a>
             <a class="carousel-control-next" href="#woning-carousel" role="button" data-slide="next">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>

@@ -90,17 +90,20 @@
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
-  height: 50px;
-  width: 50px;
-  background-color: red;
-  top: 85px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  top: 100px;
+  padding-top: 1px;
 }
 
 .carousel-control-prev {
+  padding-left: 5px;
   left: 15px;
 }
 
 .carousel-control-next {
+  padding-left: 8px;
   right: 15px;
 }
 
