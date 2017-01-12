@@ -9,15 +9,15 @@
     }
 ?>
 
-<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+<button class="navbar-toggler hidden-md-up float-sm-right float-xs-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
 
-<div class="container">
+<div class="container responsive-menu text-lg-center">
     <a class="navbar-brand no-hover" href="index.php">
         <img src="images/logo-h.png" alt="logo horizontal" />
     </a>
-
-    <div class="collapse navbar-toggleable-md text-xs-center" id="navbarResponsive">
-        <ul class="nav navbar-nav">
+    <div class="clearfix hidden-lg-only"></div>
+    <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        <ul class="nav navbar-nav text-md-center">
             <li class="nav-item <?php if(checkUrl('nieuwbouw')) {echo 'active';} ?>">
                 <a class="nav-link" href="#">Nieuwbouw</a>
             </li>
@@ -29,5 +29,4 @@
             </li>
         </ul>
     </div>
-
 </div>

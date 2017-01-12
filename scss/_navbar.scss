@@ -169,8 +169,6 @@
 // Custom navbar navigation built on the base `.nav` styles.
 
 .navbar-nav {
-  display: inline-block;
-  margin-left: -190px;
   .nav-item {
     float: left;
   }
@@ -195,7 +193,6 @@
   .navbar-brand,
   .navbar-toggler {
     float: left;
-    margin-right: 15px;
     color: $navbar-light-active-color;
     padding: 0;
     border-radius: 0;

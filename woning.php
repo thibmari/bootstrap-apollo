@@ -1,11 +1,5 @@
 <?php
-include "partials/db_connect.php";
-$id             = isset($_GET['id']) ? $_GET['id'] : 0;
-$query          = "SELECT * FROM woningen WHERE woning_id='$id' ";
-$result         = $db->query($query, MYSQLI_STORE_RESULT);
-$woningResult   = mysqli_fetch_array($result, MYSQLI_ASSOC);
-$price          = number_format($woningResult['prijs'], 0, ',', '.');
-$fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    include "partials/details-fetching.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -49,13 +43,13 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 <body>
 
 <nav class="navbar navbar-light bg-faded">
-    <?php include "partials/navigation.php" ; ?>
+    <?php include "partials/navigation.php"; ?>
 </nav>
 
 <div class="container woning_headers">
     <h2 class="text-lg-left text-md-left"><?php echo $woningResult['adres']; ?></h2>
     <h6><?php echo $woningResult['stad']; ?></h6>
-    <h5>€ <?php echo $price ; ?></h5>
+    <h5>€ <?php echo $price; ?></h5>
 </div> <!-- /container -->
 
 <div class="container container_img">
@@ -90,9 +84,14 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     <p>
         <a data-toggle="lightbox" data-gallery="woning-pics" class="btn btn-primary btn-lg"
           href="<?php echo $directory . '/' . $lastFile ; ?>" role="button">
-            Bekijk alle <?php echo $imgCount; ?> afbeeldingen
+            Alle <?php echo $imgCount; ?> afbeeldingen
+        </a>
+        <a href="kopen" class="btn btn-secondary btn-lg" role="button">
+            <i class="fa fa-th" aria-hidden="true"></i>
+            Overzicht
         </a>
     </p>
+
 </div>
 
 <div class="container">
@@ -105,53 +104,53 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                 <ul class="col-sm-12 col-lg-6 description-list">
                     <li>
                         <span class="list-header">Type:</span>
-                        <span class="list-content">Huis</span>
+                        <span class="list-content"><?php echo $mytype ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">Bouwjaar:</span>
-                        <span class="list-content">1976</span>
+                        <span class="list-content"><?php echo $bouwjaar ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">Staat:</span>
-                        <span class="list-content">Herverkoop</span>
+                        <span class="list-content"><?php echo $mystaat ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">Woon opp:</span>
-                        <span class="list-content">170m²</span>
+                        <span class="list-content"><?php echo $woonOpp ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">Grond opp:</span>
-                        <span class="list-content">300m²</span>
+                        <span class="list-content"><?php echo $grondOpp ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">Omgeving</span>
-                        <span class="list-content">Park</span>
+                        <span class="list-content"><?php echo $omgeving ; ?></span>
                     </li>
                 </ul>
                 <ul class="col-sm-12 col-lg-6 description-list">
                     <li>
                         <span class="list-header">Woning code:</span>
-                        <span class="list-content">AP 346</span>
+                        <span class="list-content"><?php echo $woningCode ;?></span>
                     </li>
                     <li>
                         <span class="list-header">Slaapkamers:</span>
-                        <span class="list-content">3</span>
+                        <span class="list-content"><?php echo $slaapN ;?></span>
                     </li>
                     <li>
                         <span class="list-header">KI:</span>
-                        <span class="list-content">485</span>
+                        <span class="list-content"><?php echo $ki ;?></span>
                     </li>
                     <li>
                         <span class="list-header">SBK:</span>
-                        <span class="list-content">Woongebied</span>
+                        <span class="list-content"><?php echo $sbk ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">EPC waarde:</span>
-                        <span class="list-content">725</span>
+                        <span class="list-content"><?php echo $epcw ; ?></span>
                     </li>
                     <li>
                         <span class="list-header">EPC referentie:</span>
-                        <span class="list-content">20150901-0001788463-1</span>
+                        <span class="list-content"><?php echo $epcr ; ?></span>
                     </li>
                 </ul>
             </div>
@@ -159,34 +158,6 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
             <h2>Indeling</h2>
             <ul class="info-list">
                 <?php
-                $terrasN        = $woningResult['terrasN'];
-                $terras         = $woningResult['terras'];
-                $livingN        = $woningResult['livingN'];
-                $living         = $woningResult['living'];
-                $inkomN         = $woningResult['inkomN'];
-                $inkom          = $woningResult['inkom'];
-                $hoekN          = $woningResult['hoekN'];
-                $hoek           = $woningResult['hoek'];
-                $slaapN         = $woningResult['slaapN'];
-                $slaap          = $woningResult['slaap'];
-                $badkamerN      = $woningResult['badkamerN'];
-                $badkamer       = $woningResult['badkamer'];
-                $keukenN        = $woningResult['keukenN'];
-                $keuken         = $woningResult['keuken'];
-                $bergingN       = $woningResult['bergingN'];
-                $berging        = $woningResult['berging'];
-                $garageN        = $woningResult['garageN'];
-                $garage         = $woningResult['garage'];
-                $parkeerplaatsN = $woningResult['parkeerplaatsN'];
-                $parkeerplaats  = $woningResult['parkeerplaats'];
-                $tuinN          = $woningResult['tuinN'];
-                $tuin           = $woningResult['tuin'];
-
-                $extra1N        = $woningResult['extra1N'];
-                $extra1         = $woningResult['extra1'];
-                $extra2         = $woningResult['extra2'];
-                $extra2N        = $woningResult['extra2N'];
-
                 if ($terrasN != 0){echo "<li><span class='list-header'>Terras</span> - $terras</li>";}
                 if ($livingN != 0){echo "<li><span class='list-header'>Woonkamer</span>  - $living</li>";}
                 if ($inkomN != 0){echo "<li><span class='list-header'>Inkomhal</span> - $inkom</li>";}
@@ -198,14 +169,13 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                 if ($garageN != 0){echo "<li><span class='list-header'>Garage</span> - $garage</li>";}
                 if ($parkeerplaatsN != 0){echo "<li><span class='list-header'>Parkeerplaats</span> - $parkeerplaats</li>";}
                 if ($tuinN != 0){echo "<li><span class='list-header'>Tuin</span> - $tuin</li>";}
-
                 if ($extra1N != 0){echo "<li>$extra1</li>";}
                 if ($extra2N != 0){echo "<li>$extra2</li>";}
                 ?>
             </ul>
 
             <h2 class="margin-top">Bijkomende informatie</h2>
-            <ul class="info-list margin-bottom-double">
+            <ul class="info-list custom-bottom">
                 <li>
                     Werd er een stedenbouwkundige vergunning uitgereikt? Ja
                 </li>
@@ -241,15 +211,16 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                 </li>
             </ul>
         </div>
-        <div class="col-lg-3 col-sm-12 padding-left-cs margin-bottom-double">
+        <div class="col-lg-3 col-sm-12 padding-left-cs margin-bottom-double margin-top">
             <h2 class="h2_custom text-lg-center text-xs-center">Interesse in deze woning?</h2>
             <a class="btn btn-primary btn-sm full-width" href="kopen" role="button">Informatie aanvragen</a>
             <a class="btn btn-primary btn-sm full-width" href="kopen" role="button">Bezoek aanvragen</a>
             <a class="btn btn-secondary btn-sm full-width" href="kopen" role="button">Pagina afdrukken</a>
+
             <div class="share-bar">
-                <ul>
-                    <span class="share-title">Deel deze woning</span>
-                    <div class="share-icons">
+                <span class="share-title">Deel deze woning</span>
+                <div class="share-icons">
+                    <ul>
                         <li>
                           <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $fullUrl; ?>">
                               <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -265,9 +236,10 @@ $fullUrl        = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
                             </a>
                         </li>
-                    </div>
-                </ul>
-            </div>
+                    </ul>
+                </div>
+            </div><!-- /Sharebar -->
+
         </div>
     </div>
 </div>
