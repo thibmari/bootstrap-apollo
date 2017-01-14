@@ -118,7 +118,7 @@
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   font-size: $navbar-toggler-font-size;
   line-height: 1;
-  background: transparent no-repeat center center;
+  background: #fff no-repeat center center;
   background-size: 24px 24px;
   border: $border-width solid transparent;
   @include border-radius($navbar-toggler-border-radius);
@@ -193,7 +193,7 @@
   .navbar-brand,
   .navbar-toggler {
     float: left;
-    color: $navbar-light-active-color;
+    color: #fff;
     padding: 0;
     border-radius: 0;
     @include hover-focus {
@@ -204,12 +204,12 @@
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-light-color;
-      padding: 3px;
+      padding: 3px 5px;
+      color: #fff;
       border-radius: 0;
       @include hover-focus {
-        color: #fff;
         background-color: $brand-primary;
+
       }
     }
 
@@ -218,9 +218,6 @@
     .nav-link.open,
     .nav-link.active {
       @include plain-hover-focus {
-        color: #fff;
-        padding: 4px;
-        border-radius: 0;
         background-color: $brand-primary;
       }
     }

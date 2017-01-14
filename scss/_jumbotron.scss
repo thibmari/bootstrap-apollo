@@ -9,6 +9,11 @@
   }
 }
 
+.jumbotron-image {
+  background-image: url('../../images/nieuwpoort-staketsel.jpg');
+  background-size: cover;
+}
+
 .jumbotron-hr {
   border-top-color: darken($jumbotron-bg, 10%);
 }

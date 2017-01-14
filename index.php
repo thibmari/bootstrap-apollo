@@ -14,20 +14,7 @@
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-19130992-3']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+    <?php include "partials/google-analytics.php"; ?>
 </head>
 <?php
     include "partials/db_connect.php";
@@ -39,11 +26,11 @@
     <?php include "partials/navigation.php" ; ?>
 </nav>
 
-<div class="jumbotron">
+<div class="jumbotron jumbotron-image">
     <div class="container text-lg-center text-xs-center">
         <img src="images/logo.png" alt="immo apollo logo" />
-        <h1 class="display-3">Vastgoed makelaar te Nieuwpoort</h1>
-        <p>Immo Apollo is al vele jaren een van de grootste vastgoedspecialisten te Nieuwpoort. Wij zijn voornamelijk gespecialiseerd in nieuwbouw projecten, je kan ook beleggen op nieuwbouwresidenties.</p>
+        <h1 class="display-3">Vind uw koopwoning te regio Nieuwpoort</h1>
+        <h3>Uw vastgoed specialist</h3>
         <p><a class="btn btn-primary btn-lg" href="kopen" role="button">Zoek een woning &raquo;</a></p>
     </div>
 </div>
@@ -136,10 +123,10 @@
         <div class="row text-lg-center text-xs-center">
             <div class="col-lg-3 invisible">.</div>
             <div class="col-sm-12 col-lg-6 small-p">
+                <p>Immo Apollo is al vele jaren een van de grootste vastgoedspecialisten te Nieuwpoort. Wij zijn voornamelijk gespecialiseerd in nieuwbouw projecten, je kan ook beleggen op nieuwbouwresidenties.</p>
                 <p>Didier De Gendt is een gespecialiseerd vastgoedmakelaar te Nieuwpoort. Didier is gespecialiseerd in nieuwbouw residenties.</p>
                 <p>Met meer dan 30 jaar ervaring en professionele kennis in allerhande vastgoedtransacties bent u bij ons aan het juiste adres!</p>
-                <p>Onze werkzaamheden omvatten zowel de de schatting en de verkoop van particuliere eigendommen, overwegend in Nieuwpoort en in de kuststreek. Dankzij een vlot roulerend aanbod van woningen, appartementen en gronden kan Immo Apollo u telkens een nieuw alternatief aanreiken opdat we volledig op dezelfde golflengte zitten. Een huis (ver)koop je trouwens niet elke dag! Bent u koper of verkoper? Uw toekomst start bij Immo Apollo!</p>
-                <p><a class="btn btn-primary btn-lg" href="kopen" role="button">Lees meer &raquo;</a></p>
+                <p><a class="btn btn-primary btn-lg" href="over" role="button">Lees meer &raquo;</a></p>
             </div>
         </div>
     </div><!-- /container -->

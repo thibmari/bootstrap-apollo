@@ -16,16 +16,25 @@
         <img src="images/logo-h.png" alt="logo horizontal" />
     </a>
     <div class="clearfix hidden-lg-only"></div>
+    <div class="nav-top-right hidden-lg-down">
+        <h2>Uw makelaar te Nieuwpoort</h2>
+    </div>
     <div class="collapse navbar-toggleable-md" id="navbarResponsive">
         <ul class="nav navbar-nav text-md-center">
+            <li class="nav-item <?php if(checkUrl('kopen') || checkUrl('woning')) {echo 'active';} ?>">
+                <a class="nav-link" href="kopen">Kopen</a>
+            </li>
             <li class="nav-item <?php if(checkUrl('nieuwbouw')) {echo 'active';} ?>">
                 <a class="nav-link" href="#">Nieuwbouw</a>
             </li>
-            <li class="nav-item <?php if(checkUrl('kopen') || checkUrl('woning')) {echo 'active';} ?>">
-                <a class="nav-link" href="kopen">Te koop</a>
-            </li>
             <li class="nav-item <?php if(checkUrl('spanje')) {echo 'active';} ?>">
                 <a class="nav-link" href="spanje">Zuid Spanje</a>
+            </li>
+            <li class="nav-item <?php if(checkUrl('over')) {echo 'active';} ?>">
+                <a class="nav-link" href="over">Over ons</a>
+            </li>
+            <li class="nav-item <?php if(checkUrl('contact')) {echo 'active';} ?>">
+                <a class="nav-link" href="contact">Contact</a>
             </li>
         </ul>
     </div>

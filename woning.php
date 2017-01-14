@@ -47,9 +47,23 @@
 </nav>
 
 <div class="container woning_headers">
-    <h2 class="text-lg-left text-md-left"><?php echo $woningResult['adres']; ?></h2>
-    <h6><?php echo $woningResult['stad']; ?></h6>
-    <h5>€ <?php echo $price; ?></h5>
+    <div class="row">
+        <div class="col-sm-12 col-lg-9">
+            <h2 class="text-lg-left text-md-left"><?php echo $woningResult['adres']; ?></h2>
+            <h6><?php echo $woningResult['stad']; ?></h6>
+            <h5>€ <?php echo $price; ?></h5>
+        </div>
+        <div class="col-sm-12 col-lg-3 phone-padding hidden-lg-down">
+            <a href="kopen" class="btn btn-primary btn-lg" role="button">
+                <i class="fa fa-th" aria-hidden="true"></i>
+                Terug naar overzicht
+            </a>
+            <a href="kopen" class="btn btn-secondary btn-lg" role="button">
+                <i class="fa fa-image" aria-hidden="true"></i>
+                Bekijk afbeeldingen
+            </a>
+        </div>
+    </div>
 </div> <!-- /container -->
 
 <div class="container container_img">
@@ -82,13 +96,13 @@
         ?>
     </div>
     <p>
-        <a data-toggle="lightbox" data-gallery="woning-pics" class="btn btn-primary btn-lg"
+        <a class="btn btn-primary btn-lg" href="tel:003258241414" role="button">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            +32 58 24 14 14
+        </a>
+        <a data-toggle="lightbox" data-gallery="woning-pics" class="btn btn-secondary btn-lg"
           href="<?php echo $directory . '/' . $lastFile ; ?>" role="button">
             Alle <?php echo $imgCount; ?> afbeeldingen
-        </a>
-        <a href="kopen" class="btn btn-secondary btn-lg" role="button">
-            <i class="fa fa-th" aria-hidden="true"></i>
-            Overzicht
         </a>
     </p>
 
