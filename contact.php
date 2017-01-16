@@ -41,48 +41,48 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5 col-sm-12">
-            <form class="contact-form">
+            <form class="contact-form" method="post" action="contact-action.php">
                 <h2 class="margin-top">Contact opnemen</h2>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-lg-3 col-sm-12 col-form-label">Naam*</label>
                     <div class="col-lg-9 col-sm-12">
-                        <input class="form-control" type="text" placeholder="Voornaam Achternaam" id="example-text-input">
+                        <input required name="name" class="form-control" type="text" placeholder="Voornaam Achternaam" id="example-text-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-lg-3 col-sm-12 col-form-label">Adres</label>
                     <div class="col-lg-9 col-sm-12">
-                        <input class="form-control" type="text" placeholder="Albert I Laan 153" id="example-text-input">
+                        <input name="adres" class="form-control" type="text" placeholder="Albert I Laan 153" id="example-text-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-number-input" class="col-lg-3 col-sm-12 col-form-label">Postcode</label>
                     <div class="col-lg-9 col-sm-12">
-                        <input class="form-control" type="number" placeholder="8620" id="example-number-input">
+                        <input name="postcode" class="form-control" type="number" placeholder="8620" id="example-number-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-lg-3 col-sm-12 col-form-label">Plaats</label>
                     <div class="col-lg-9 col-sm-12">
-                        <input class="form-control" type="text" placeholder="Nieuwpoort" id="example-text-input">
+                        <input name="plaats" class="form-control" type="text" placeholder="Nieuwpoort" id="example-text-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-email-input" class="col-lg-3 col-sm-12 col-form-label">Email*</label>
                     <div class="col-lg-9 col-sm-12">
-                        <input class="form-control" type="email" placeholder="email@voorbeeld.be" id="example-email-input">
+                        <input required name="email" class="form-control" type="email" placeholder="email@voorbeeld.be" id="example-email-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-tel-input" class="col-lg-3 col-sm-12 col-form-label">Telephone*</label>
                     <div class="col-lg-9 col-sm-12">
-                        <input class="form-control" type="tel" placeholder="059 205 555" id="example-tel-input">
+                        <input required name="tel" class="form-control" type="tel" placeholder="059 205 555" id="example-tel-input">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="exampleTextarea" class="col-lg-3 col-sm-12 col-form-label">Opmerking</label>
                     <div class="col-lg-9 col-sm-12">
-                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        <textarea name="message" class="form-control" id="exampleTextarea" rows="3"></textarea>
                     </div>
                 </div>
                 <div class="form-group row">

@@ -5,8 +5,8 @@
 
 footer {
   background-color: #263753;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -31,33 +31,40 @@ footer h2 {
   margin-bottom: 15px;
 }
 
-footer p, footer a {
-  font-size: 0.8rem;
-  line-height: 1.4
-}
-
 footer li a, footer li a:hover {
   color: #fff;
 }
 
 .sitemap {
-  margin-top: 30px;
+  margin-top: 15px;
 }
+
 .sitemap ul {
   margin: 0 auto;
-  width: 65%;
+  padding-left: 0 !important;
+  @media (min-width:991px) {
+    width: 65%;
+    padding-left: 40px;
+  }
 }
+
+footer i {
+  color: #ED6B06;
+  font-size: 19px !important;
+}
+
 .sitemap li {
-  font-size: 1rem;
-  float: left;
-  margin-right: 25px;
+  @media (min-width:991px) {
+    float: left;
+    margin-right: 25px;
+  }
 }
 
 footer ul {
   list-style-type: none;
   color: #fff;
   margin-left: -35px;
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.4
 }
 

@@ -12,6 +12,7 @@
     <title>Kopen | IMMO APOLLO</title>
 
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -35,8 +36,6 @@
 </nav>
 
 <div class="container">
-    <!--<h2 class="text-lg-left text-md-left text-sm-center text-xs-center margin-top">Vakantiehuizen te koop in Zuid Spanje</h2>-->
-
     <div class='row woning-grid woning-grid_spanje text-lg-left text-md-left text-sm-center text-xs-center active'>
 
         <?php
@@ -46,9 +45,9 @@
                 $priceFormatted = number_format($price, 0, ',', '.');
                 $image = explode(',', $house->ImageLink);
                 echo "                                
-                    <div class='col-md-4 lazy'>
+                    <div class='col-md-4'>
                         <a href='spanje-detail?id=$key'>
-                            <img class='img-fluid img-border' src='$image[0]' />
+                            <img class='img-fluid img-border lazy' src='$image[0]' />
                         </a>
                         <ul>
                             <li>Kamers: $house->Rooms</li>

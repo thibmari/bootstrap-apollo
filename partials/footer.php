@@ -7,10 +7,7 @@
 
         <div class="col-md-4">
             <img src="images/logo.png" alt="logo footer" />
-            <h2>Contacteer ons</h2>
-
             <ul>
-                <li>IMMO APOLLO</li>
                 <li>Albert I Laan 153/c</li>
                 <li>8620 Nieuwpoort</li>
             </ul>
@@ -18,6 +15,7 @@
                 <li><a href="tel:003258241414">+32 58 24 14 14</a></li>
                 <li><a href="mailto:info@immo-apollo.be">info@immo-apollo.be</a></li>
             </ul>
+            <p>Vind ons op  <a href="https://www.facebook.com/Immoapollo" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></p>
             <ul>
                 <li>Vastgoedmakelaar-bemiddelaar 201807</li>
                 <li><a target="_blank" href="http://www.biv.be/sites/default/files/download_document/reglement-van-plichtenleer-deontologie-vastgoedmakelaars.pdf">Deontologische code van het BIV</a></li>
