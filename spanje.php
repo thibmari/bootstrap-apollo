@@ -46,7 +46,7 @@
                 $image = explode(',', $house->ImageLink);
                 echo "                                
                     <div class='col-md-4'>
-                        <a href='spanje-detail?id=$key'>
+                        <a href='casa-spanje?id=$key'>
                             <img class='img-fluid img-border lazy' src='$image[0]' />
                         </a>
                         <ul>

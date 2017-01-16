@@ -114,7 +114,7 @@
             <h2 class="margin-top">Omschrijving</h2>
             <p><?php echo $woningResult['beschrijving']; ?></p>
             <h2 class="margin-top">Kenmerken</h2>
-            <div class="row">
+            <div class="row row-nieuwpoort">
                 <ul class="col-sm-12 col-lg-6 description-list">
                     <li>
                         <span class="list-header">Type:</span>
@@ -143,7 +143,7 @@
                 </ul>
                 <ul class="col-sm-12 col-lg-6 description-list">
                     <li>
-                        <span class="list-header">Woning code:</span>
+                        <span class="list-header">Referentie:</span>
                         <span class="list-content"><?php echo $woningCode ;?></span>
                     </li>
                     <li>
@@ -281,9 +281,7 @@
     var map;
     function initMap() {
         var mapCanvas = document.getElementById('google-map'),
-            myLatLng = new google.maps.LatLng(51.1501859, 2.7210115000000314),
             mapOptions = {
-                center: myLatLng,
                 zoom: 15,
                 scrollwheel: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
